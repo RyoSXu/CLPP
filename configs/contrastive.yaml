@@ -1,0 +1,18 @@
+# configs/contrastive.yaml
+train:
+  batch_size: 256
+  num_workers: 4
+  num_epochs: 100
+  lr: 1.0e-5
+  log_dir: ./logs/contrastive
+  checkpoint_dir: ./checkpoints/contrastive
+  encoder_checkpoint_dir: ./checkpoints/encoder
+  data_checkpoint_dir: ./data/data_checkpoints
+
+model:
+  latent_size: 256
+  hidden_size: 256    # 对应 CrystalEncoder 的 hidden_size
+  nblocks: 3
+  temperature: 0.1
+dataset:
+  data_dir: ./data
